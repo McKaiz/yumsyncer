@@ -29,7 +29,6 @@ ENV oneTimeRun 0
 VOLUME /data
 VOLUME /repo
 COPY script.sh /script.sh
-ADD script.sh /root/script.sh
 RUN yum clean all && yum update -y
 RUN yum install -y reposync createrepo epel-release
 CMD bash /script.sh
