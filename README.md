@@ -18,7 +18,7 @@ This container creates a local repositoty (without webserver for now) for the gi
 
 `docker run -d -v data:/data -v repo:/repo acrossthisnewdivide/yumsyncer`
 
-This container has no default `.repo`files.
+This container has no default `.repo` files.
 Make sure to take a look at this Readme before updating. This project is still under development so every update might break an existing container.
 
 WITHOUT ANY WARRANTY!

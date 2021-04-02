@@ -40,10 +40,6 @@ while true; do
         fi
     done
     end=$(date +"%T")
-    if ${oneTimeRun} == 0; then
-        echo "Done Downloading. Shutting Off!"
-        exit 0
-    fi
 
     echo "Done Downloading! Waiting for" ${waitDuration} "(Current Time: " $end ")"
     sleep ${waitDuration}
