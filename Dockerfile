@@ -22,13 +22,13 @@
 #SOFTWARE.
 ##################################################################################
 
-FROM centos:7.9.2009
+FROM fedora:34
 ENV waitDuration 12h
 ENV TZ Europe/Amsterdam
 ENV oneTimeRun 0
 VOLUME /data
 VOLUME /repo
 COPY script.sh /script.sh
-RUN yum clean all && yum update -y
-RUN yum install -y reposync createrepo epel-release
+RUN dnf update -y &&  dnf clean all && dnf clean packages
+RUN dnf install -y yum-utils createrepo
 CMD bash /script.sh
